@@ -3,7 +3,7 @@ using WalkingTec.Mvvm.Core;
 
 namespace LLShop.Models
 {
-    public class Banner : PersistPoco
+    public class Banner : BasePoco
     {
         /// <summary>
         /// 

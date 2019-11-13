@@ -16,6 +16,7 @@ namespace LLShop
         }
         
         public DbSet<Category> Category { get; set; }
+        //public DbSet<CategoryRelation> CategoryRelation { get; set; }
         public DbSet<Banner> Banner { get; set; }
         public DbSet<Goods> Goods { get; set; }
 
