@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using WalkingTec.Mvvm.Core;
-using WalkingTec.Mvvm.Core.Attributes;
 
 namespace LLShop.Models
 {

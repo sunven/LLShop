@@ -95,5 +95,19 @@
         "Text": "分类管理",
         "Url": "/category"
     }
+,{
+        "Id": "0bd1f825-c572-4059-8a72-5a348255f8c6",
+        "ParentId": null,
+        "Text": "分类管理",
+        "Url": "/category"
+    }
+,{
+        "Id": "2633d0f4-82f5-4254-854f-4e2bdebafe3a",
+        "ParentId": null,
+        "Text": "分类管理",
+        "Url": "/category"
+    }
+
+
 
 ]

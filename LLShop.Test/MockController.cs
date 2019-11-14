@@ -2,14 +2,12 @@
 using Moq;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using WalkingTec.Mvvm.Core;
 using WalkingTec.Mvvm.Mvc;
 using WalkingTec.Mvvm.TagHelpers.LayUI.Common;
 using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.Extensions.Options;
 using Microsoft.Extensions.Caching.Memory;
-using LLShop;
 
 namespace LLShop.Test
 {

@@ -36,6 +36,15 @@ export default {
         controller: '_DataPrivilege',
         component: React.lazy(() => import('./dataprivilege'))
     }
+
+, category: {
+        name: '分类管理',
+        path: '/category',
+        controller: 'Category',
+        component: React.lazy(() => import('./category'))
+    }
 /**WTM**/
+ 
+ 
  
 }

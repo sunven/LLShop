@@ -1,77 +1,81 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using WalkingTec.Mvvm.Core;
 
 namespace LLShop.Models
 {
-    public class Category : BasePoco
+    /// <summary>
+    /// 
+    /// </summary>
+    public class Category : BasePoco,ITreeData<Category>
     {
         /// <summary>
-        /// 
+        /// 分类名称
         /// </summary>
         [Display(Name = "分类名称")]
         [Required, MaxLength(32)]
         public string Name { get; set; }
 
         /// <summary>
-        /// 
+        /// 分类描述
         /// </summary>
         [Display(Name = "分类描述")]
         [MaxLength(512)]
         public string Description { get; set; }
 
         /// <summary>
-        /// 
-        /// </summary>
-        [Display(Name = "图片")]
-        public string PicUrl { get; set; }
-
-        /// <summary>
-        /// 
+        /// 排序
         /// </summary>
         [Display(Name = "排序")]
         public int Seq { get; set; }
 
         /// <summary>
-        /// 
+        /// 编码
         /// </summary>
         [Display(Name = "编码")]
         public string Code { get; set; }
 
         /// <summary>
-        /// 
+        /// 父编码
         /// </summary>
         [Display(Name = "父编码")]
         public string ParentCode { get; set; }
 
+        /// <summary>
+        /// 商品
+        /// </summary>
         [Display(Name = "商品")]
         public List<Goods> Goods { get; set; }
         
-        [Display(Name = "图片")]
+        /// <summary>
+        /// 附件Id
+        /// </summary>
+        [Display(Name = "附件Id")]
+        public Guid FileAttachmentId { get; set; }
+        
+        /// <summary>
+        /// 附件
+        /// </summary>
+        [Display(Name = "附件")]
         public FileAttachment FileAttachment { get; set; }
         
+        /// <summary>
+        /// 父级Id
+        /// </summary>
         [Display(Name = "父级Id")]
-        [ForeignKey("Id")]
         public Guid? ParentId { get; set; }
-        
-        [Display(Name = "父级")]
-        public virtual Category Parent { get; set; }
-        
+
+        /// <summary>
+        /// 子级
+        /// </summary>
         [Display(Name = "子级")]
-        public virtual List<Category> Childs  { get; set; }
-        
-//        /// <summary>
-//        /// 
-//        /// </summary>
-//        [Display(Name = "父Id")]
-//        public int CategoryRelationId { get; set; }
-//        
-//        [Display(Name = "父节点")]
-//        public CategoryRelation CategoryRelation { get; set; }
-//        
-//        [Display(Name = "子节点")]
-//        public List<CategoryRelation> CategoryRelations { get; set; }
+        public List<Category> Children { get; set; }
+
+        /// <summary>
+        /// 父级
+        /// </summary>
+        [Display(Name = "父级")]
+        public Category Parent { get; set; }
     }
 }
